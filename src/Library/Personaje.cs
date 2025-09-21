@@ -20,7 +20,7 @@ public class Personaje
         int suma = 0;
         foreach (Item item in items)
         { 
-            suma += item.Attack;
+            suma += item.Ataque;
         }
 
         return suma;
@@ -31,7 +31,7 @@ public class Personaje
         int suma = 0;
         foreach (Item item in items)
         {
-            suma += item.Defense;
+            suma += item.Defensa;
         }
         return suma;
     }
