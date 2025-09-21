@@ -3,7 +3,7 @@ using Library.Interfaces;
 
 namespace Library;
 
-public class Mago: IMagia
+public class Mago: IMagia//el mago es el unico que puede usar el libro
 {
     private Personaje personaje;
     public LibroDeHechizos Libro { get; set; }
@@ -21,11 +21,11 @@ public class Mago: IMagia
 
     public int HechizoMagico()
     {
-        if (Libro == null) return 0; // si no tiene libro, no hace daño
+        if (Libro == null) return 0; //si no tiene libro, no hace daño
         return Libro.Hechizos.Sum(h => h.Ataque);
     }
 
-    public void Ataque(Personaje objetivo)
+    public void Ataque(Personaje objetivo)//se calcula el daño de los hechizos del mago teniendo en cuenta la defensa
     {
             int danio = HechizoMagico() - objetivo.DefensaTotal();
             if (danio > 0)

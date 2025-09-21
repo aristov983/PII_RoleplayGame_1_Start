@@ -22,4 +22,17 @@ public class Tests
         
         Assert.That(herido.Vida, Is.EqualTo(herido.VidaMaxima));
     }
+
+    public void AtquedelEnano()
+    {
+        Personaje elfoBase = new Personaje("ElfoDoctor", 100);
+        Elfo elfo = new Elfo(elfoBase);
+        
+        Personaje enanoEnojado = new Personaje("EnanoLider", 100);
+        Enano enano = new Enano(enanoEnojado);
+        
+        enano.AtaqueTemperamental(elfoBase);
+        
+        Assert.That(elfoBase.Vida, Is.EqualTo());
+    }
 }

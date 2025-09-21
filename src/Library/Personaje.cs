@@ -15,7 +15,7 @@ public class Personaje
         this.VidaMaxima = vida;
     }
 
-    public int AtaqueTotal()
+    public int AtaqueTotal()//Devuelve el valor final del ataque, basándose en el valor de ataque de los ítems que tiene el personaje
     {
         int suma = 0;
         foreach (Item item in items)
@@ -26,7 +26,7 @@ public class Personaje
         return suma;
     }
 
-    public int DefensaTotal()
+    public int DefensaTotal()//Devuelve el valor final de la defensa, basándose en el valor de defensa de los ítems que tiene el personaje
     {
         int suma = 0;
         foreach (Item item in items)
@@ -46,7 +46,7 @@ public class Personaje
         items.Remove(item);
     }
     
-    public void Ataque(Personaje enemigo)
+    public void Ataque(Personaje enemigo)//Calcula el daño final al objetivo, teniendo en cuenta la defensa
     {
         int danio = AtaqueTotal() - enemigo.DefensaTotal();
         if (danio > 0)

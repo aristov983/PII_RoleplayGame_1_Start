@@ -2,7 +2,7 @@ using Library.Interfaces;
 
 namespace Library;
 
-public class Elfo : IAyudante
+public class Elfo : IAyudante//el elfo es el unico que puede curar
 {
     private Personaje personaje;
 
@@ -11,7 +11,7 @@ public class Elfo : IAyudante
         this.personaje = p;
     }
     
-    public void Curar(Personaje aliado)
+    public void Curar(Personaje aliado) //El elfo puede curar a los aliados
     {
         aliado.Curar();
     }
