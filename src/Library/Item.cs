@@ -2,15 +2,16 @@ namespace Library;
 
 public class Item
 {
-    public string Name { get; }
+    public string Nombre { get; }
 
-    public int Attack { get; set; }
+    public int Ataque { get; set; }
         
-    public int Defense { get; set; }
+    public int Defensa { get; set; }
 
-    public Item(int attack, int defense)
+    public Item(string name ,int attack, int defense)
     {
-        this.Attack = attack;
-        this.Defense = defense;
+        this.Nombre = name;
+        this.Ataque = attack;
+        this.Defensa = defense;
     }
 }
