@@ -2,7 +2,7 @@ using Library.Interfaces;
 
 namespace Library;
 
-public class Elfo : IMagia, IAyudante
+public class Elfo : IAyudante
 {
     private Personaje personaje;
 
@@ -14,11 +14,5 @@ public class Elfo : IMagia, IAyudante
     public void Curar(Personaje aliado)
     {
         aliado.Curar();
-    }
-
-    public int HechizoMagico()
-    {
-        // return personaje.items.OfType<LibroDeHechizos>().Sum(libro => libro.podertotal);
-        throw new NotImplementedException();
     }
 }
